@@ -1,8 +1,0 @@
-com/royalhaskoning/service/LogGrpcInterceptor.class
-com/royalhaskoning/spec/SearchFilterSpec.class
-com/royalhaskoning/entity/Car.class
-com/royalhaskoning/config/CustomAuditorAware.class
-com/royalhaskoning/service/CarService.class
-com/royalhaskoning/CarServerApplication.class
-com/royalhaskoning/repository/CarRepository.class
-com/royalhaskoning/config/GlobalInterceptorConfiguration.class
