@@ -1,0 +1,6 @@
+com/royalhaskoning/dto/CarDto.class
+com/royalhaskoning/dto/SearchRequestDto.class
+com/royalhaskoning/CarClientApplication.class
+com/royalhaskoning/controller/CarClientController.class
+com/royalhaskoning/service/CarService.class
+com/royalhaskoning/config/ApplicationConfiguration.class

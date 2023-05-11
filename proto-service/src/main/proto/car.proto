@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package ="com.royalhaskoning.carstockmanagement.model";
+
+message CarInformation{
+  string model= 1;
+  string make = 2;
+  string version = 3;
+  int32 yearOfRelease = 4;
+  double price = 5;
+  double fuelConsumption = 6;
+  double annualMaintenanceCost =7;
+}
+
+message CarSaveRequest{
+  CarInformation carInformation = 1;
+}
+
+message CarSaveResponse{
+  CarInformation carInformation = 1;
+}
+
+message SearchRequest{
+  string make = 1;
+  int32 yearOfRelease = 2;
+}
+
+message SearchResponse{
+  repeated CarInformation carInformationList= 1;
+}
+
+message LowestTotalAnnualCostRequest{
+  int32 expectedDistance = 1;
+  double priceOfFuel = 2;
+}
+message LowestTotalAnnualCostInformation{
+  string model= 1;
+  string make = 2;
+  string version = 3;
+  int32 yearOfRelease = 4;
+  double price = 5;
+  double fuelConsumption = 6;
+  double annualMaintenanceCost =7;
+  double totalAnnualCost = 8;
+}
+message LowestTotalAnnualCostResponse{
+   repeated LowestTotalAnnualCostInformation lowestTotalAnnualCostList = 1;
+}
+
+service CarService{
+  rpc saveCar(CarSaveRequest) returns (CarSaveResponse);
+  rpc searchCar(SearchRequest) returns (SearchResponse);
+  rpc searchLowestTotalAnnualCost(LowestTotalAnnualCostRequest) returns (LowestTotalAnnualCostResponse);
+}
+
